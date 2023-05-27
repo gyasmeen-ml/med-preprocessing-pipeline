@@ -1,12 +1,13 @@
 # med-preprocessing-pipeline
 
-### Step 1: Download dataset: 
+### Step 1: Download your dataset: 
 Follow instructions in this link (https://github.com/neheller/kits23/tree/main/kits23)
         
         
 ### Step 2: Download preprocessing pipeline python scipts
 
 ``` git clone git@github.com:gyasmeen-ml/med-preprocessing-pipeline.git ``` 
+
 ``` cd med-preprocessing-pipeline ``` 
 
 ### Step 3: Data conversion and background cropping
