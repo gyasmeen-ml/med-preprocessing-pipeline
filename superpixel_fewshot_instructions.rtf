@@ -2,7 +2,7 @@ Follow steps 1-3 from this GitHub to download and preprocess kits dataset\
 
 Then run the following 2 commands:
 ## to create 2d pickle files with background and superpixel masks\
-python create_superpixel_kits23 --data_dir "path/to/dir/with/npy/3d/volumes" --output_dir "path/to/save/2d/pickle/files"\
+python create_superpixel --data_dir "path/to/dir/with/npy/3d/volumes" --output_dir "path/to/save/2d/pickle/files"\
 
 ## to create json file with class stats which will be used later on in the data loader for few-shot segmentation \
 python create_json_classmap --which_dataset kits --pkl_dir "path/to/dir/with/pickle/files" --json_save_path "path/to/save/json/file/"}
