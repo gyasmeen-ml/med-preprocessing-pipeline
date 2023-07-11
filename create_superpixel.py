@@ -77,7 +77,7 @@ def make_dataset_nnunet(data_root, save_dir):
         
         img_modality = "CT"
         c = 0 
-        for fid in glob.glob(data_root + "/*.npz")[85:100]:
+        for fid in glob.glob(data_root + "/*.npz"):
             c += 1
             data = np.load(fid)['data']
             data = np.transpose(data, (0,3, 2, 1))
@@ -90,7 +90,7 @@ def make_dataset_nnunet(data_root, save_dir):
                 if np.sum(msk) > 0 : ## remove slices with background only
                     
                     with open(f'{save_dir}/image_{scan_id}-z{i}.pkl', "wb") as f:
-                        pickle.dump(data[0, i,...], f)
+                        pickle.dump(data[0, :,:,i], f)
 
 
                         pickle.dump(msk, f)
